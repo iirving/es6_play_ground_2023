@@ -19,7 +19,7 @@ const cart = new Map();
 const shoe = { id: 0, name: "show", price: 150 };
 const boot = { id: 2, name: "boot", price: 250 };
 
-console.log("berfore cart: ", cart); //
+console.log("before cart: ", cart); //
 function addToCart(item) {
   if (cart.has(item.id)) {
     const cartItem = cart.get(item.id);
@@ -123,3 +123,32 @@ console.log("teamNationalities: ", teamNationalities);
 const uniqueTeamNationalities = [...new Set(teamNationalities)];
 console.log("uniqueTeamNationalities: ", uniqueTeamNationalities);
 console.log("number of unique Nationalities: ", uniqueTeamNationalities.length);
+
+// union
+// as of Jan 2024 the union method is not available in the Set object for node
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union
+
+// Ypu could use union and intersection with core-js polyfills
+// https://github.com/zloirock/core-js npm install
+// import Set from 'core-js-pure/actual/set';
+
+// console.log("\n\nunion");
+// const odd = new Set([1, 3, 5, 7, 9]);
+// const even = new Set([2, 4, 6, 8, 10]);
+// const prime = new Set([2, 3, 5, 7, 11]);
+
+// const union = new Set([...odd, ...even, ...prime]);
+// console.log("union: ", union);
+
+// console.log(odd.union(even).union(prime));
+// console.log("odd", odd, "even", even, "prime", prime);
+
+// intersection
+// as of Jan 2024 the intersection method is not available in the Set object for node
+// console.log("\n\nintersection");
+// const odd = new Set([1, 3, 5, 7, 9]);
+// const prime = new Set([2, 3, 5, 7, 11]);
+
+// console.log("odd", odd, "prime", prime);
+// console.log("odd.intersection(prime): ", odd.intersection(prime));
+// console.log("odd", odd, "prime", prime);
