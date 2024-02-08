@@ -1,3 +1,5 @@
+// challange to get the unique languages of posts by an author with more than a minimum number of views
+
 const posts = [
   {
     title: "Blog Post 1",
